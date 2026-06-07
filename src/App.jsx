@@ -32,7 +32,9 @@ import {
   Scale,
   Gavel,
   BookOpen,
-  ExternalLink
+  ExternalLink,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { Line, Doughnut } from 'react-chartjs-2';
 import {
@@ -65,6 +67,18 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [notifications, setNotifications] = useState(3);
   const [currentDate, setCurrentDate] = useState('');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   useEffect(() => {
     const today = new Date();
@@ -132,6 +146,14 @@ export default function App() {
         </ul>
 
         <div className="sidebar-footer">
+          <li
+            className="nav-item"
+            onClick={toggleTheme}
+            style={{ marginBottom: '12px' }}
+          >
+            {theme === 'dark' ? <Sun /> : <Moon />}
+            <span>{theme === 'dark' ? '浅色模式' : '深色模式'}</span>
+          </li>
           <li
             className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`}
             onClick={() => setActiveTab('settings')}

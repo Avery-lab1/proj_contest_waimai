@@ -2591,4 +2591,72 @@ input:checked + .switch-slider:before {
   gap: 6px;
 }
 
+/* Light Theme Variables Override */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass-active: rgba(241, 245, 249, 0.85);
+  
+  --accent-cyan: #0284c7;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-pink: #db2777;
+  
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-success: #10b981;
+  --color-info: #0284c7;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --border-glass-glow: rgba(37, 99, 235, 0.2);
+  
+  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.1);
+  --shadow-glow-red: 0 0 20px rgba(239, 44, 44, 0.1);
+}
+
+/* Light Theme Transitions & Fixes */
+[data-theme="light"] body {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(124, 58, 237, 0.03) 0%, transparent 40%),
+    linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+}
+
+[data-theme="light"] .sidebar {
+  background: rgba(255, 255, 255, 0.9);
+  border-right: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .logo-text h1 {
+  background: linear-gradient(to right, #0f172a, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .nav-item:hover {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .nav-item.active {
+  color: #ffffff;
+}
+
+[data-theme="light"] *::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.1);
+}
+[data-theme="light"] *::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+/* Add smooth transition to all elements for theme change */
+body, aside, div, li, ul, span, h1, h2, h3, h4, p, a, input, select, button, canvas {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background-image 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 
