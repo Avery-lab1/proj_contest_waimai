@@ -226,10 +226,10 @@ export default function App() {
         {activeTab === 'rights' && <RightsProtectionView />}
         {activeTab === 'settings' && <SettingsView />}
 
-        <footer style={{ marginTop: '48px', paddingBottom: '24px', textAlign: 'center', borderTop: '1px solid rgba(255, 255, 255, 0.05)', paddingTop: '24px' }}>
-          <p style={{ fontSize: '12px', color: '#6b7280', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-            <Shield size={12} style={{ color: '#00f2fe' }} />
-            PriceShield 反大数据杀熟平台 © 2026. 纯前端交互系统设计 · 专为比赛研制。平台不存储您的个人账单。
+        <footer style={{ marginTop: '48px', paddingBottom: '24px', textAlign: 'center', borderTop: '1px solid var(--border-glass)', paddingTop: '24px' }}>
+          <p style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+            <Shield size={12} style={{ color: 'var(--accent-cyan)' }} />
+            PriceShield 算法价格歧视与大数据杀熟智能识别监测平台 © 2026. 系统承诺保障您的数据隐私安全与公平交易权利。
           </p>
         </footer>
       </main>
