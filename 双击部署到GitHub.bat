@@ -65,8 +65,8 @@ echo.
 echo   Please configure GitHub Pages on GitHub website:
 echo   1. Open your GitHub repository in browser:
 echo      https://github.com/Avery-lab1/proj_contest_waimai
-echo   2. Go to "Settings" -> "Pages"
-echo   3. Under "Build and deployment" -> "Branch", select "gh-pages"
+echo   2. Go to "Settings" -^> "Pages"
+echo   3. Under "Build and deployment" -^> "Branch", select "gh-pages"
 echo   4. Click "Save"
 echo   5. Wait a few minutes, your site will be live!
 echo ========================================================
